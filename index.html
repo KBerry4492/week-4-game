@@ -4,26 +4,119 @@
 	<title>DS Fighter Simulator</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 </head>
 <body>
 
 	<div class="Title">
-		Title Placeholder	
+		Dark Souls Fighter!	
 	</div>
 
-	<div>
-		Main body
+	<div class="mainContent">
 		<div class="selectFighter">
-			fighter selection
+			Fighter selection:
+			<div class="fighterProfile" id="fpK">Knight:
+				<div class="fpPic"><img src="assets/images/black-knight-ppic.png"></div>
+				<ul>	
+					<li>Health: 200</li>
+					<li>Stamina: 100</li>
+					<li>Attack: 20</li>
+					<li>Defence: 10</li>
+				</ul>
+				<br>
+				<button id="pickPlayerK" class="pickPlayer btns">Player</button>
+				<button id="pickComputerK" class="pickComputer btns">Enemy</button>
+			</div>
+
+			<div class="fighterProfile" id="fpC">Cleric:
+				<div class="fpPic"><img src="assets/images/cleric-ppic.png"></div>
+				<ul>	
+					<li>Health: 150</li>
+					<li>Stamina: 120</li>
+					<li>Attack: 10</li>
+					<li>Defence: 8</li>
+				</ul>
+				<br>
+				<button id="pickPlayerC" class="pickPlayer btns">Player</button>
+				<button id="pickComputerC" class="pickComputer btns">Enemy</button>
+
+			</div>
+			<div class="fighterProfile" id="fpR">Rogue:
+				<div class="fpPic"><img src="assets/images/rogue-ppic.png"></div>
+				<ul>	
+					<li>Health: 150</li>
+					<li>Stamina: 110</li>
+					<li>Attack: 5</li>
+					<li>Defence: 5</li>
+				</ul>
+				<br>
+				<button id="pickPlayerR" class="pickPlayer btns">Player</button>
+				<button id="pickComputerR" class="pickComputer btns">Enemy</button>
+
+			</div>
+			<div class="fighterProfile" id="fpP">Pyromancer:
+				<div class="fpPic"><img src="assets/images/wizard-ppic.png"></div>
+				<ul>	
+					<li>Health: 100</li>
+					<li>Stamina: 80</li>
+					<li>Attack: 25</li>
+					<li>Defence: 4</li>
+				</ul>
+				<br>
+				<button id="pickPlayerP" class="pickPlayer btns">Player</button>
+				<button id="pickComputerP" class="pickComputer btns">Enemy</button>
+
+			</div>
 		</div>
 
 		<div class="fightZone">
-			fighter zone
+			<span class="fZone"> Fight Zone: </span>
+			
+			<div>
+				
+				<!-- Player Fighter -->
+				<div class="fighterPic" id="pVis">Player 1:<span id="fName1"></span>
+					<span id="player-fighter"><img class="fPic" src="assets/images/black-knight.png"></span>
+					<span id="player-status">
+						<ul>
+							<li>Health: <span id="pHP"></span></li>
+							<li>Stamina: <span id="pSt"></span></li>
+							<li>Attack: <span id="pAt"></span></li>
+							<li>Defence: <span id="pDf"></span></li>
+						</ul>
+					</span>
+
+				</div>
+
+				<!-- Computer Fighter -->
+				<div class="fighterPic" id="cVis">Computer:<span id="fName2"></span>
+					<span id="computer-fighter"><img class="fPic"  src="assets/images/black-knight.png"></span>
+					<span id="computer-status">
+						<ul>	
+							<li>Health: <span id="cHP"></span> </li>
+							<li>Stamina: <span id="cSt"></span></li>
+							<li>Attack: <span id="cAt"></span></li>
+							<li>Defence: <span id="cDf"></span></li>
+						</ul>
+					</span>
+
+				</div>
+				
+				<!-- Buttons -->
+				<div class="buttonDiv">
+					<button class="btns" id="atkBtn"> Attack! </button>
+					<button class="btns" id="blkBtn"> Block! </button>
+					<br><br>
+					<button class="btns" id="resetBtn"> Reset game. </button>
+				</div>
+
+			</div>
+
 		</div>
 
 	</div>
 
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
